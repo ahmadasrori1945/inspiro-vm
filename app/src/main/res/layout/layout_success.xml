@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginBottom="30dp"
+            app:srcCompat="@drawable/ic_success"
+            tools:ignore="ContentDescription,NestedWeights" />
+
+        <TextView
+            android:id="@+id/tvCode3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="Pembayaran selesai, selamat menikmati"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvKembalian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Please login again"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/tvNilaiKembalian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Rp. 20000"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_background"
+            android:text="Selesai"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,124 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/wave_blue"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleTextAppearance="@style/Toolbar.TitleText"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="center"
+            app:expandedTitleMarginBottom="50dp"
+            app:expandedTitleTextAppearance="@style/Toolbar.TitleText"
+            app:layout_scrollFlags="enterAlways"
+            app:title="@string/app_name"
+            app:toolbarId="@+id/toolbar">
+
+            <com.massivedisaster.widget.ArcToolbarView
+                android:id="@+id/arcToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:padding="15dp"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Total Bayar"
+            android:textColor="@android:color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:layout_marginStart="10dp"
+            android:id="@+id/tvTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Rp. 0"
+            android:textColor="@android:color/black"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/ic_money"
+                    android:id="@+id/ivMoney"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="( klik gambar diatas untuk memasukkan uang )"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+        <Button
+            android:id="@+id/btnBayar"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:textSize="18sp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_background"
+            android:textColor="@color/colorWhite"
+            android:text="Bayar"
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

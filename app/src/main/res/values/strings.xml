@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Inspiro Vanding Machine</string>
+    <string name="text_beli">Beli</string>
+    <string name="text_bayar">Bayar</string>
+</resources>

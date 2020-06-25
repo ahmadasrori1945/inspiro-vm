@@ -1,0 +1,207 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/wave_blue"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:collapsedTitleTextAppearance="@style/Toolbar.TitleText"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="center"
+            app:expandedTitleMarginBottom="50dp"
+            app:expandedTitleTextAppearance="@style/Toolbar.TitleText"
+            app:layout_scrollFlags="enterAlways"
+            app:title="@string/app_name"
+            app:toolbarId="@+id/toolbar">
+
+            <com.massivedisaster.widget.ArcToolbarView
+                android:id="@+id/arcToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_biscuit"
+                android:id="@+id/ivProduct"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Oreo"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText,RtlCompat" />
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Rp. 2000"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText,RtlCompat,RtlHardcoded" />
+
+            <TextView
+
+                android:id="@+id/tvStock"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="Stock : 5 pcs"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText,RtlCompat,RtlHardcoded" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Jumlah yang ingin kamu beli"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText,InefficientWeight" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/btnMin"
+                    android:background="@drawable/btn_background"
+                    android:layout_height="32dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_minus"/>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvQty"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="@android:color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/btnAdd"
+                    android:background="@drawable/btn_background"
+                    android:layout_height="32dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_more"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Total Bayar"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="Rp. 0"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnCheckout"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:textSize="18sp"
+            android:background="@drawable/btn_background"
+            android:layout_height="wrap_content"
+            android:text="Checkout"
+            android:textColor="@android:color/white"
+            android:textAllCaps="false"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cvProduct"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_biscuit"
+            android:scaleType="centerCrop"
+            android:id="@+id/ivProduct"/>
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Nama"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:textAlignment="center"
+            android:id="@+id/tvPrice"
+            android:text="Rp. 2000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText,RtlCompat" />
+
+        <TextView
+            android:id="@+id/tvStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Stock : 5 pcs"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/btnBeli"
+            android:layout_width="match_parent"
+            android:textSize="18sp"
+            android:layout_height="32dp"
+            android:background="@drawable/btn_background_item_product"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/text_beli"
+            android:layout_gravity="right"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
