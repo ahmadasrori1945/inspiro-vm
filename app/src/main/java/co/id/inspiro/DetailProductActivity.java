@@ -119,6 +119,7 @@ public class DetailProductActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (qty>0) {
                     qty--;
+                    tvQty.setText(String.valueOf(qty));
                     total = qty * price;
                     String totalharga = formatter.format((double) total);
                     tvTotal.setText("Rp. "+totalharga);
