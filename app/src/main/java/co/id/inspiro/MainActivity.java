@@ -8,8 +8,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
 
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView rvKelas;
     @BindView(R.id.tvDate)
     TextView tvDate;
+    private boolean doubleBackToExitPressedOnce = false;
 
     private ProductDatabase productDatabase;
     private List<ProductModel> productModelList;
@@ -76,6 +79,27 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }, 1000, 1000); //Initial Delay and Period for update (in milliseconds)
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            Intent a = new Intent(Intent.ACTION_MAIN);
+            a.addCategory(Intent.CATEGORY_HOME);
+            a.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(a);
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Klik lagi untuk keluar", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000);
+
     }
 
     @Override
